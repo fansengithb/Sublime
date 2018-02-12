@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hello World</title>
+</head>
+<body>
+<div id="demo" style="position:absolute;width:200px;height:200px;background-color:yellow;"></div>
+<script>
+    function on(el,name,callback){
+        if(el.addEventListener){
+            el.addEventListener(name,callback,false);
+        }else{
+            el.attachEvent('on'+name,callback);
+        }
+    }
+    function un(el,name,callback){
+        if(el.removeEventListener){
+            el.removeEventListener(name,callback,false);
+        }else{
+            el.dettachEvent('on'+name,callback);
+        }
+    }
+    var div = document.getElementById('demo');
+    on(div,'mousedown',function(e){
+        var startX = e.pageX||e.x,
+            startY = e.pageY||e.y,
+            divX = div.offsetLeft,
+            divY = div.offsetTop,
+            relativeX = startX - divX,
+            relativeY = startY - divY;
+
+        var onmousemove = function(e){
+                var moveX = e.pageX||e.x,
+                    moveY = e.pageY||e.y;
+                var x_move,y_move;
+                var width = document.all.demo.offsetWidth,
+                    height = document.all.demo.offsetHeight;
+
+                x_move  = moveX - relativeX;
+                y_move  = moveY - relativeY;
+
+                if(x_move < 0)
+                {
+                    x_move = 0;
+                }
+                if(y_move < 0)
+                {
+                    y_move = 0;
+                }
+
+
+                if(x_move> window.innerWidth-width)
+                {
+                    x_move = window.innerWidth-width;
+                }
+                if(y_move> window.innerHeight-height)
+                {
+                    y_move = window.innerHeight-height;
+                }
+                div.style.left = x_move+'px';
+                div.style.top  = y_move+'px';
+
+            },
+            onmouseup = function(e){
+                un(document,'mousemove',onmousemove)
+                un(document,'mouseup',onmouseup);
+            }
+        on(document,'mousemove',onmousemove);
+        on(document,'mouseup',onmouseup);
+    });
+
+</script>
+</body>
+</html>

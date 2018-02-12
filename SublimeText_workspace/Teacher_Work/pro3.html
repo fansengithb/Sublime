@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type ="text/javascript">
+        $(function () {
+            $(".clickMe").click(function(){
+                  //  alert("--");
+                displaymessage();
+            });
+
+
+
+
+
+        });
+
+
+        function displaymessage(){
+            var value = document.getElementById('number').value;
+            var value1 =$("#number").val();
+            /*alert("value:"+value+"  value1:"+value1);*/
+            if(isNaN(value))
+            {
+                document.getElementById('number').style.color='red';
+                document.getElementById('number').value = '不符合要求，请重新输入';
+            }
+            else{
+
+                function fun(value){
+
+                    if(value<1)return 0;
+                    var sum = 1,i=value;
+                    while(i){
+
+                        sum = sum*i--;
+                    }
+                    return sum;
+                }
+                document.all.number.value = fun(value);
+            }
+
+        }
+
+
+        function clickmessage(){
+            document.getElementById('number').style.color='black';
+        }
+
+    </script>
+    <style type="text/css">
+        input:focus {
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <!--onfocus="this.value='' 点击编辑框，编辑框内容会清空-->
+    <!--onfocus="javascript:if(this.value=='123')this.value='';"  onBlur="if(this.value=='')value='123';"-->
+    <input type="text" style="color:#BCBCBC;background-color:#FBFBFB;border:1px  solid #DDDDDD;width:200px;height:30px; font-size:15px;"
+           value="求整数阶层"
+           onfocus="javascript:if(this.value=='求整数阶层')this.value='';"  onBlur="if(this.value=='')value='求整数阶层';" id="number"
+    />
+
+
+   <!-- <input type = "text"  id="number" value="求整数阶层" onfocus="this.value=''"
+           style="color:#BCBCBC;background-color:#FBFBFB;border:1px  solid #DDDDDD;width:200px;height:30px; font-size:15px;"
+           onclick = "clickmessage()"/>-->
+
+    <!--onclick = "displaymessage()"-->
+    <input type = "button" value="Click me" class="clickMe"   style="width:80px;height:29px;"/>
+</form>
+</body>
+</html>

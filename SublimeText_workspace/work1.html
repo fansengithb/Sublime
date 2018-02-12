@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<script type="text/javascript" src="\js\jquery-3.2.1.js"></script>
+<script type="text/javascript" src="D:\hand_javaee\SublimeText_workspace\js\myjs.js"></script>
+	<title>作业1</title>
+</head>
+<body>
+<input type="text" id="num">
+<input type="submit" id="sub">
+<input type="text"   id="result">
+<script src="text/javascript"></script>
+<script >
+	$(document).ready(function()
+		{
+			$("#sub").click(function(){
+				var $num=$("#num").val();
+				console.log($num);
+				var sult=getresult($num);
+				$('#result').val(sult);
+			});
+			
+		});
+</script>
+</body>
+</html>

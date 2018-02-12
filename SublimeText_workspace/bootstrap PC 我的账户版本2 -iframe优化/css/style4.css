@@ -1,0 +1,79 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrap {
+    width: 100%;
+}
+/*t-body*/
+.wrap .t-body {
+    margin-left: 12%;
+    width: 72%;
+    height: auto;
+    float: left;
+    /*display: none;*/
+    /*display: inline-block;*/
+    /*margin:0 auto;*/
+    /*border:1px solid black;*/
+}
+
+.wrap .t-body form {
+    width: 600px;
+}
+.wrap .t-body form input {
+    width: 90%;
+}
+
+ ul li {
+    width: 100px;
+    margin-top: 5px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+i {
+    color: red;
+}
+
+.form-group a {
+    float: right;
+    margin-top: -33px;
+    line-height: 30px;
+    display: block;
+    height: 30px;
+}
+
+
+/*底部*/
+
+.mybottom {
+    width: 95%;
+    height: 117px;
+    border: 1px solid #a09696;
+    position: relative;
+    margin: 10% 36px;
+    box-shadow: 3px 3px 2px #c1c7ca
+}
+
+.mybottom>div {
+    width: 25%;
+    height: 114px;
+    border-right: 1px solid #c2c2c5;
+    float: left;
+}
+
+.mybottom>div img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px #939696;
+    position: relative;
+    margin: 0 26px
+}
+
+.mybottom>div a {
+    text-decoration: none;
+    display: block;
+        font-size: 24px;
+    text-align: center;
+}

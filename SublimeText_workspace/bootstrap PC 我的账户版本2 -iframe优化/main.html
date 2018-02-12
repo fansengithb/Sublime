@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的账户</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li class="active">个人资料</li>
+        </ol>
+        <hr style="border: 0;border-bottom: 2px solid black;" />
+        <!-- 左侧导航 -->
+        <div class="wrap">
+            <div class="collapse navbar-collapse nav-left" id="hand">
+                <ul class=" nav navbar-nav side-nav">
+                    <li id="first" class="adactive"><a href="#" id='ziliao' name="index.html">个人资料</a></li>
+                    <li><a href="#">安全中心</a></li>
+                    <li><a href="#">我的地址</a></li>
+                    <li><a href="#">账号绑定</a></li>
+                    <li><a href="#" id="dingdang" name="index2.html">我的订单</a></li>
+                    <li><a href="#">心愿单</a></li>
+                    <li>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="border:0px">
+                            我的账户
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="    min-width: 96px; border: 0px;">
+                            <li><a href="#" id="jifen" name="index3.html">我的积分</a></li>
+                            <li><a href="#">我的特权</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <iframe src="index.html" frameborder="0" id="myiframe" width="80%" height="630px" scrolling="no" style="margin-top: -20px ;position: relative;z-index: 99"></iframe>
+        </div>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $("#hand li a").on("click", function() {
+                // $(this).addClass("adactive");
+                $("#first").removeClass("adactive");
+            });
+            $(function() {
+                $("#ziliao").click(function() {
+                    var name = $(this).attr("name");
+                    $('#myiframe').attr("src", name).ready();
+
+                });
+                $("#dingdang").click(function() {
+                    var name = $(this).attr("name");
+                    $('#myiframe').attr("src", name).ready();
+
+                });
+                $('#jifen').click(function() {
+                    var name = $(this).attr("name");
+                    $("#myiframe").attr("src", name).ready();
+                });
+            });
+        });
+        </script>
+</body>
+
+</html>

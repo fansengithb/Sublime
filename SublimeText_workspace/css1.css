@@ -1,0 +1,17 @@
+/*body{
+	/*background-color: gray;*/
+/*	background-image: url("women.PNG");
+}  */
+/*p{
+	/width: 200px;
+	padding: 10px;
+	background-color: red; 
+	background-image: url(women.PNG);
+}*/
+body{
+	background-image: url("women.PNG");
+	background-repeat: no-repeat;
+	/*background-position:100px 100px;*/
+	/*background-attachment: fixed;*/
+
+}

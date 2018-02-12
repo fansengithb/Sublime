@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的账户</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+ <div class="wrap">
+            
+            <div class="t-body2">
+                <div class="body-top">
+                    <div class="top1">
+                        <p>筛选条件/</p>
+                    </div>
+                    <div class="dropdown top2">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            日期
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">升序</a></li>
+                            <li><a href="#">降序</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown top2">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            商城订单
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">未发货</a></li>
+                            <li><a href="#">物流信息</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown top2">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            订单状态
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">已付款</a></li>
+                            <li><a href="#">已收藏</a></li>
+                            <li><a href="#">找代付</a></li>
+                            <li><a href="#">花呗分期</a></li>
+                            <li><a href="#">京东白条</a></li>
+                            <li><a href="#">信用卡贷款</a></li>
+                            <li><a href="#">12期免息</a></li>
+                            <li><a href="#">付首期</a></li>
+                        </ul>
+                    </div>
+                    <hr style="border: 0;border-bottom: 2px solid black;margin-top:-18px" />
+                </div>
+                <div class="container body-content">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>商品/</th>
+                                <th>单价/</th>
+                                <th>数量/</th>
+                                <th>总价/</th>
+                                <th>状态/</th>
+                                <th>操作/</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6" class="danhao">2017-7-17 20:03 订单号：2324567622356 <a href="#"> 订单详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img">
+                                        <img src="image/1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p>2017Gucii最新款，潮女范，百变女王 SFL89</p>
+                                        <p>M 码 正品</p>
+                                    </div>
+                                </td>
+                                <td>￥458</td>
+                                <td>1</td>
+                                <td>￥468</td>
+                                <td>待付款</td>
+                                <td>
+                                    <input type="submit" value="立即付款" class="buy">
+                                    <input type="submit" value="取消订单" class="cansel">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="danhao">2017-7-13 20:03 订单号：2324567622356 <a href="">订单详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img">
+                                        <img src="image/2.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p>2017花花公子热卖款，淑女范，时尚女王 FKL89</p>
+                                        <p>M 码 正品</p>
+                                    </div>
+                                </td>
+                                <td>￥658</td>
+                                <td>1</td>
+                                <td>￥658</td>
+                                <td>待付款</td>
+                                <td>
+                                    <input type="submit" value="立即付款" class="buy">
+                                    <input type="submit" value="取消订单" class="cansel">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="danhao">2017-6-13 10:45 订单号：2324567622356 <a href="">订单详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img">
+                                        <img src="image/3.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p>2017香奈儿热卖款，派对女王，引领时尚 FGH39</p>
+                                        <p>M 码 正品</p>
+                                    </div>
+                                </td>
+                                <td>￥958</td>
+                                <td>1</td>
+                                <td>￥958</td>
+                                <td>已付款</td>
+                                <td>
+                                    <input type="submit" value="评价" class="cansel">
+                                    <input type="submit" value="整单申请售后" class="shouhou" id="askfor-shouhou">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 分业条 -->
+                    <nav aria-label="Page navigation" style="position: relative; width: 235px;float: right; margin-top: -30px;">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- 模态框 -->
+            <div class="modal fade" id="model" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">操作不可逆</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align: center">你是否确认取消订单</p>
+                        </div>
+                        <div class="modal-footer" style="text-align: center;">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
+                            <button type="button" class="btn btn-primary" id="confirm">是</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+        </div>
+        <!-- 售后模态框 -->
+        <div class="modal fade" id="shouhouModal" tabindex="-1" role="dialog" aria-labelledby="">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">申请售后</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="img">
+                                    <img src="image/3.jpg" alt="衣服">
+                                </div>
+                                <div class="info">
+                                    <p>2017香奈儿热卖款，派对女王，引领时尚 FGH39</p>
+                                </div>
+                            </div>
+                            <hr style="border: 0;border-bottom: 2px solid black;margin-top:-18px" />
+                            <!--  <div class="form-group"> -->
+                            <span>选择服务/</span>
+                            <label for="tuihuo">
+                                <input type="radio" id="tuihuo">退货退款</label>
+                            <label for="tuikuang">
+                                <input type="radio" id="tuikuang">仅退款</label>
+                            <!-- </div> -->
+                            <div class="form-group">
+                                <label for="yuanyin">退货退款原因/</label>
+                                <input type="text" class="form-control" id="yuanyin" placeholder="请填写">
+                            </div>
+                            <div class="form-group">
+                                <label for="num">退货数量/</label>
+                                <input type="text" class="form-control" id="num" placeholder="请填写">
+                            </div>
+                            <div class="form-group">
+                                <label for="money">退款金额/</label>
+                                <input type="text" class="form-control" id="money" placeholder="请填写">
+                            </div>
+                            <div class="form-group">
+                                <label for="money">说明/</label>
+                                <textarea name="shuoming" id="shuoming" style="width: 601px;display: block;" placeholder="请详细说明情况"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="money">物流单号/</label>
+                                <input type="text" class="form-control" id="money" placeholder="请填写">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            取消</button>
+                        <button type="button" class="btn btn-primary" id="confirmshouhou">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $("#hand li a").on("click", function() {
+                // $(this).addClass("adactive");
+                $("#dingdang").removeClass("adactive");
+            });
+            $("#hand li a").on("click", function() {
+                // $(this).addClass("adactive");
+                $("#first").removeClass("adactive");
+            });
+            $('.table').on('click', '.cansel', function() {
+                $('#model').modal('show');
+            });
+            $('#model #confirm').click(function(e) {
+                $('#model').modal('hide');
+            });
+
+            $('.table').on('click', '#askfor-shouhou', function() {
+                $('#shouhouModal').modal('show');
+            });
+            $('#confirmshouhou').click(function(e) {
+                $('#shouhouModal').modal('hide');
+            });
+        });
+        </script>
+</body>
+
+</html>

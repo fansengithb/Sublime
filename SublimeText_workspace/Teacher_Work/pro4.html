@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+</head>
+<script type="text/javascript">
+    $(function(){
+        //IE
+        if($.browser.msie){
+            $("#sno").get(0).attachEvent("onpropertychange",function (o){
+                alert(o.srcElement.value+"---");
+            });
+        //非IE
+        }else{
+            $("#sno").get(0).addEventListener("input",function(o){
+                var checkVal =  o.target.value;
+                if(isNaN(checkVal)){
+                    o.target.value="";
+                }
+            },false);
+        }
+    });
+</script>
+<body>
+<input id="sno" value="">
+</body>
+
+</html>
+
+
+
+
+

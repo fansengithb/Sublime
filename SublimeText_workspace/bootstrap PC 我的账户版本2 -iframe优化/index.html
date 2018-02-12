@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的账户</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style4.css">
+</head>
+
+<body>
+    <!-- 导航 -->
+ <!--    <div class="container"> -->
+       
+        <!-- 左侧导航 -->
+        <div class="wrap">
+           
+            <div class="t-body">
+                <div class="myform">
+                    <form>
+                        <div class="form-group">
+                            <label for="name"><i>*</i> 姓名</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday"><i>*</i> 生日</label>
+                            <input type="text" class="form-control" id="birthday" placeholder="Enter birthday">
+                        </div>
+                        <div class="form-group">
+                            <label for="other-name"><i>*</i> 昵称</label>
+                            <input type="text" class="form-control" id="other-name" placeholder="Enter 昵称">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i>*</i> 手机</label>
+                            <input type="phone" class="form-control" id="phone" placeholder="Enter Phone Number">
+                            <a href="#">修改号码</a>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i>*</i> 邮箱</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                            <a href="">修改邮箱</a>
+                        </div>
+                        <span>带<i>* </i> 为必填项</span>
+                    </form>
+                </div>
+                <div class="mybottom">
+                    <div class="bot1">
+                        <a href=""><img src="image/服饰.png" alt=""></a>
+                        <a href="">热搜美妆</a>
+                    </div>
+                    <div class="bot2">
+                        <a href=""><img src="image/服饰配件.png" alt=""></a>
+                        <a href="">大牌特卖</a>
+                    </div>
+                    <div class="bot3">
+                        <a href=""><img src="image/美妆.png" alt=""></a>
+                        <a href="">时尚尖货</a>
+                    </div>
+                    <div class="bot4">
+                        <a href=""><img src="image/鞋子.png" alt=""></a>
+                        <a href="">猜你喜欢</a>
+                    </div>
+                </div>
+            </div>
+    
+      <!--   </div> -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $("#hand li a").on("click", function() {
+                // $(this).addClass("adactive");
+                $("#first").removeClass("adactive");
+            });
+           
+        });
+       
+           
+</body>
+
+</html>

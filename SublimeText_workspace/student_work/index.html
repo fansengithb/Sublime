@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>div随着鼠标移动</title>
+	<style>
+		#mydiv{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			margin-left: 500;
+			margin-top: 100;
+			width: 100px;
+			height: 100px;
+			background: #ff00ff;
+			border: 5px solid black;
+			box-shadow: 5px 5px .4 #fff;
+			
+		}
+	</style>
+</head>
+<body>
+<div id="mydiv">
+	
+</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#mydiv").mousedown(function(e){
+				// 设置移动后的默认位置
+				var endx=0;
+				var endy=0;
+				// 获取div的初始位置
+				var left=parseInt($("#mydiv").css("left"));
+				var top=parseInt($("#mydiv").css("top"));
+				// 获取鼠标按下时的坐标
+				var downx=e.pageX;
+				var downy= e.pageY;
+				// 鼠标按下时给div挂事件
+				$("#mydiv").bind("mousemove",function(es){
+					var endx=es.pageX-downx+left;//计算div最终的位置
+					var endy=es.pageY-downy+top;
+					$("#mydiv").css("left",endx+"px").css("top",endy+"px")
+				});
+			});
+			$("#mydiv").mouseup(function(){
+				$("#mydiv").unbind("mousemove");
+			});
+		});
+	</script>
+</body>
+</html>
